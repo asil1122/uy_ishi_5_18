@@ -14,7 +14,7 @@ function App() {
   }, []);
   return (
     <>
-      <div className="container">
+      <div>
         <Form refetch={getdata} />
         <div className="my-[50px]  ">
           {data?.map((item) => (

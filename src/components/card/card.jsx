@@ -15,8 +15,8 @@ export const Card = ({ des, title, id, refetch }) => {
 
   return (
     <>
-      <div className="container">
-        <div className=" py-[20px] bg-white rounded-[20px]  text-center border-[2px] border-red-600 mb-[20px]">
+      <div>
+        <div>
           {show ? (
             <Form
               setShow={setShow}
@@ -27,17 +27,10 @@ export const Card = ({ des, title, id, refetch }) => {
           ) : (
             <>
               <h2>{title}</h2>
-              <p className="mb-[20px]">{des}</p>
-              <div className="flex gap-[20px] justify-center">
-                <button onClick={deleteItem} className="bg-red-500">
-                  Delete
-                </button>
-                <button
-                  onClick={() => setShow(!show)}
-                  className="bg-yellow-500"
-                >
-                  Edit
-                </button>
+              <p>{des}</p>
+              <div>
+                <button onClick={deleteItem}>Delete</button>
+                <button onClick={() => setShow(!show)}>Edit</button>
               </div>
             </>
           )}
